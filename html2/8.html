@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>表格</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <!-- 表格相关标签  table tr td -->
+
+        <!-- table 属性 border width/height -->
+        <!-- 单元格外边距  cellspacing  -->
+        <!-- 单元格内边距  cellpadding  -->
+        <!-- align 表格相对于其他元素的对齐方式  left|center|right -->
+        <!-- bgcolor 设置背景颜色 -->
+        <!-- background 设置背景图片 如果背景颜色和背景图片同时设置了，那么只有背景图片起作用 -->
+        <table border="1" width="600" cellspacing="0" cellpadding="0" align="center">
+            <caption><h3>表格标题</h3></caption>
+
+            <!-- thead tbody tfoot 属性 align valign bgcolor background-->
+            <!-- align 设置内部的内容的水平对齐方式 left|center|right -->
+            <!-- valign 设置内部的内容的垂直对齐方式 top|middle|bottom|baseline -->
+            <!-- 字体大小不一致的时候，用baseline向下对齐效果比较好 -->
+            <thead bgcolor="lightgray">
+                 <tr>
+                    <!-- th 在表头里面使用 默认加粗居中 -->
+                    <th width="120">ID</th>
+                    <th>Name</th>
+                    <th>Sex</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+           
+           <tbody align="center" valign="baseline">
+                <tr height="30">
+
+                <!-- tr属性 align valign height  -->
+                    <td><font size="7">left right center</font></td>
+
+                    <!-- td/th 属性  height/width align/valign  rowspan colspan -->
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                </tr>
+                <tr height="50">
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                </tr>
+                <tr height="80">
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                    <td>aaa</td>
+                </tr>
+            </tfoot>
+            <p>不能这样写，table里面只能有 tr  caption </p>
+        </table>
+    </body>
+</html>
