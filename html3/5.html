@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>select textarea</title>
+</head>
+<body>
+	<form action="test.php" method="post" >
+		<!-- select 属性：name disabled size multiple-->
+		<!-- size 下拉框显示几个-->
+		<!-- multiple 多选， 要配合名字 使用名字加方括号（提交多个值）-->
+		<select name="grade" id="">
+			<!-- selected 列表默认选中-->
+			<!-- 当然，还有value 别忘记了-->
+			<option value="0">s59</option>
+			<option value="1">s60</option>
+			<option value="2" selected="selected">s51</option>
+			<option value="3">s61</option>
+			<option value="4">s62</option>
+		</select>
+		<br />
+		<!-- textarea 属性：name disabled rows cols readonly-->
+		<!--
+			readonly 只能读 可以复制 不能输入
+			disabled 禁用，可以看见，不能复制
+		-->
+		<textarea name="tip" id="" cols="30" rows="10">
+			这里是默认显示的。。。
+			前面的空格也会作为内容！！！！要注意
+		</textarea>
+		<input type="submit">
+	</form>
+</body>
+</html>

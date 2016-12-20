@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<!-- 表单在网页中主要负责数据采集功能。-->
+	<!-- form input select option textarea-->
+	<!-- action 最终将收集的数据交给谁处理（服务器脚本文件）提交的位置-->
+	<!-- method 提交的方式 get/post 默认是get url 传参-->
+	<!-- http://localhost/s61/html3/test.php?name=mada&age=18 get方式就是在url上面拼接-->
+
+	<!-- get | post
+		get是通过url传递参数，存在安全隐患，传递的长度有限制
+		ie6 2048
+		firefox/chrome 7780
+		post 没有大小限制 没有安全隐患
+		你可以差异下，get和post的速度或者效率上有没有区别
+	-->
+	<form action="./test.php" method="post">
+		<!-- input标签的属性 type name value size maxlength checked-->
+		<!-- name属性必须有 因为这个是提交数据的数据名，如果没有，数据无法提交-->
+		<!-- value 属性 对于text password 来说是设置默认值 对于暗流来说就是按钮上面的文字
+			对于radio checkbox来说，就是最终提交的数据，对于这两种来说，必须有该属性
+		-->
+		<!-- size 设置显示长度 -->
+		<!-- maxlength 设置最大输入长度 -->
+		<!-- checked 属性 radio checkbox 有作用，默认选中项 checked="checked"-->
+		<!-- submit 提交按钮-->
+		<!-- image 提交，用图片作为提交按钮-->
+		<!-- reset 重置按钮作用是回归默认值-->
+		<!-- button 无意义按钮-->
+		<!-- file 文件上传域-->
+		<!-- hidden 隐藏域，用来传递数据-->
+		姓名：<input type="text" size="10" maxlength="5" value="sx">
+		密码：<input type="password" name="pwd"><br />
+		性别：
+			<input type="radio" name="sex" value="0" checked="checked">女
+			<input type="radio" name="sex" value="1" checked="checked">男
+			<br />
+		尺寸：
+			<input type="radio" name="cup" value="a" /> A
+			<input type="radio" name="cup" value="b" /> B
+			<input type="radio" name="cup" value="c" /> C
+			<input type="radio" name="cup" value="d" /> D
+			<input type="radio" name="cup" value="e" /> E
+			<input type="radio" name="cup" value="f" /> F
+		<br />
+		爱好：
+			<input type="checkbox" name='like1' value="1" checked="checked">妹子
+			<input type="checkbox" name='like1' value="2" >女汉子
+			<input type="checkbox" name='like1' value="3" checked="checked">萌妹子
+			<input type="checkbox" name='like1' value="4" checked="checked">小萝莉
+			<input type="checkbox" name='like1' value="5" >死变态
+			<input type="checkbox" name='like1' value="6" checked="checked">御姐
+		<!-- 隐藏域 作用是传递数据 页面上不显示-->
+			<input type="hidden" name="mask" value="隐藏信息">
+			<input type="submit" value="求点击">
+			<!-- type 为image 的时候，这个input标签会多几个属性，类似img标签作用等同于submit-->
+			<input type="image" src="./123.jpg" width="50">
+
+			<!-- 文件区域-->
+			<input type="file" name="pic">
+			<input type="reset">
+			<input type="button" value="无意义按钮">
+
+
+	</form>
+</body>
+</html>
