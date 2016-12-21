@@ -3,7 +3,7 @@
 客户端的上传设置：
 form 	标签里三个属性
 		action="" 提交地址
-
+		
 		method="post"
 		提交方式，文件上传时，必须使用post方式
 
@@ -73,12 +73,12 @@ $_FILES数组解析
     3.["tmp_name"] 临时存放文件名，包含路径
     4.["error"] 错误号：
     	0:没有错误发生,文件上传成功.
-        1:上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值
-        2:上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值
-        3:文件只有部分被上传
-        4:没有文件被上传
-        6:找不到临时文件夹
-        7:文件写入失败 
+        	1:上传的文件超过了 php.ini 中 upload_max_filesize 选项限制的值
+        	2:上传文件的大小超过了 HTML 表单中 MAX_FILE_SIZE 选项指定的值
+        	3:文件只有部分被上传
+        	4:没有文件被上传
+        	6:找不到临时文件夹
+        	7:文件写入失败 
     5.["size"] 上传文件的大小，单位为字节
 
 处理上传的文件：
@@ -142,11 +142,11 @@ if (move_uploaded_file($fileTmp,$fileName)) {
 改进上传处理页面 doup.php
 1.接收到所有的上传信息，并生成变量
 //获取上传信息
-$fileError = $_FILES[$myfile]['error'];
-$fileSize = $_FILES[$myfile]['size'];
-$fileType = $_FILES[$myfile]['type'];
+$error = $_FILES[$myfile]['error'];
+$size = $_FILES[$myfile]['size'];
+$type = $_FILES[$myfile]['type'];
 $fileName = $_FILES[$myfile]['name'];
-$fileTmp = $_FILES[$myfile]['tmp_name'];
+$tmp = $_FILES[$myfile]['tmp_name'];
 
 !($myfile为上传域的name属性值,要写为变量,因为每个页面都有不同的name属性值,写死就废了)
 !(形参添加  默认值 $field='myfile')
