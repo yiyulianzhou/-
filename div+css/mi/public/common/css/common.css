@@ -1,0 +1,6 @@
+html,body,h1,h2,h3,h4,h5,h6,a,ul,ol,li,p,div,span,b,i,u,dl,dt,dd,hr,sup,sub,em,strong,img,table,tr,td,th,input,audio,video{margin:0;padding:0;list-style: none;text-decoration: none; font:14px/1.5 'Microsoft Yahei'}
+body{min-width: 1226px;}
+a{color:#b0b0b0;}
+.clear:after,.clear:before{content:''; clear: both; display: table;}
+
+
