@@ -7,8 +7,10 @@
 <body>
 	<h2>文件上传</h2>
 	<form action="doup.php" method="post" enctype="multipart/form-data">
-		请选择上传文件：<input type="file" name="myfile">
-		<input type="submit" value="点击上传">
+		<input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+		请选择上传的文件：
+		<input type="file" name='myfile'><br />
+		<input type="submit" value='点击上传'>
 	</form>
 </body>
 </html>
