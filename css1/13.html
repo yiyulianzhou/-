@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*
+		* 伪类选择器
+		对某个元素，不同的状态加样式
+		:link 	未访问的样式
+		:visited 已访问的样式
+		:hover 鼠标指向的样式
+		:active 鼠标点击时的样式
+		lv ha love hate
+		hover 必须放在 link 和 visited后面，才会生效
+		*/
+		a:link{color:#00f;}/*未访问的连接*/
+		a:visited{color:#0f0;}/*已访问*/
+		a:hover{
+			/*鼠标指向*/
+			color:#f00;
+			font-size:20px;
+			font-family:'宋体';
+		}
+		a:active{color:#000;}
+	</style>
+</head>
+<body>
+	<h2>伪类选择器</h2>
+	<a href="http://www.baidu.com">百度一下</a>
+	<a href="http://www.jd.com">京东</a>
+	<a href="http://www.itxdl.cn">XDL官网</a>
+	<a href="http://www.t.tt">锤子官网</a>
+</body>
+</html>
