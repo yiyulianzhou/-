@@ -1,0 +1,717 @@
+
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Html简介</title>
+<style>
+<!--
+.large {  font-size: 10.5pt;line-height: 16pt}
+-->
+</style>
+</head>
+
+<body>
+
+<p align="center"><br>
+<span lang="zh-cn"><font size="4"><b>调色原理<!-- #EndEditable --><BR><!-- #BeginEditable "%D7%F7%D5%DF%BC%B0%CA%B1%BC%E4" -->　<!-- #EndEditable --><!-- #BeginEditable "%D5%FD%CE%C4" --><SPAN 
+class=large><FONT color=#000000></FONT></SPAN>
+<TABLE class=large cellSpacing=0 cellPadding=5 width="100%" border=0>
+  
+  <TR>
+    <TD class=article><SPAN>HTML 的颜色表示可分两种： </SPAN>
+      <UL>
+        <LI><SPAN>以命名方式定义常用的颜色，如 <FONT color=#ff0000>RED</FONT>。 </SPAN>
+        <LI><SPAN>以 RGB 值表示，如 <FONT color=#ff0000>#FF0000</FONT> 表示 red。 
+        </SPAN></LI></UL>
+      <P><SPAN>命名方式涵括的色种不多亦不甚方便，较少采用，以下介绍 RGB 值的原理： </SPAN>
+      <P><SPAN>众所皆知颜色是由 "<FONT color=#ff0000>red</FONT>" "<FONT 
+      color=#008000>green</FONT>" "<FONT color=#0000ff>blue</FONT>" 三原色组合而成的，在 
+      HTML 中对於彩度的定义是 采十六进位的，对於三原色 HTML 分别给予两个十六进位去定义，也就是每个原色可有 256 
+      种彩度，故此三原色可混合成一千六佰多万的颜色。 </SPAN>
+      <P><SPAN>例如 <BR>白色的组成是 red=ff, green=ff, blue=ff, RGB 值即为 ffffff 
+      <BR>红色的组成是 red=ff, green=00, blue=00, RGB 值即为 ff0000 <BR>绿色的组成是 red=00, 
+      green=ff, blue=00, RGB 值即为 00ff00 <BR>蓝色的组成是 red=00, green=00, blue=ff, 
+      RGB 值即为 0000ff <BR>黑色的组成是 red=00, green=00, blue=00, RGB 值即为 000000 
+</SPAN>
+      <P><SPAN>於应用时常在每个 RGB 值之前加上符号 <FONT color=#ff0000>#</FONT> 以示分别，但不加亦可。 
+      </SPAN></P></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT color=#ca00ca>■ HTML 
+      基本架构：</FONT></DIV></TD></TR>
+  <TR>
+    <TD class=article>
+      <CENTER>
+      <TABLE cellSpacing=0 cellPadding=0 width=460 border=0>
+        
+        <TR>
+          <TD><SPAN>选按不同颜色按键以测试前景颜色效果 <FONT color=#ff0000></SPAN>
+            <FORM><SPAN><INPUT onclick="document.fgColor='#0000FF'" type=button value=BLUE name=colr> 
+            &nbsp; <INPUT onclick="document.fgColor='#FF0000'" type=button value=RED name=colr2> 
+            &nbsp; <INPUT onclick="document.fgColor='#FFFFFF'" type=button value=WHITE name=colr2> 
+            &nbsp; <INPUT onclick="document.fgColor='#00FF00'" type=button value=GREEN name=colr2> 
+            &nbsp; <INPUT onclick="document.fgColor='#c6a06d'" type=button value=TAN name=colr2> 
+            &nbsp; <INPUT onclick="document.fgColor='#FFFF00'" type=button value=YELLOW name=colr2> 
+            &nbsp; <INPUT onclick="document.fgColor='#000000'" type=button value=BLACK name=colr2> 
+            </SPAN></FORM><SPAN>选按不同颜色按键以测试背景颜色效果 </SPAN>
+            <FORM><SPAN><INPUT onclick="document.bgColor='#0000FF'" type=button value=BLUE name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#FF0000'" type=button value=RED name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#FFFFFF'" type=button value=WHITE name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#00FF00'" type=button value=GREEN name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#c6a06d'" type=button value=TAN name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#FFFF00'" type=button value=YELLOW name=colr2> 
+            &nbsp; <INPUT onclick="document.bgColor='#000000'" type=button value=BLACK name=colr2> 
+            </SPAN></FORM>
+            <CENTER><SPAN>或输入一个 RGB 颜色码或名称</SPAN> </CENTER>
+            <FORM method=post>
+            <CENTER><SPAN>&nbsp; <INPUT maxLength=30 onchange=Set(this) size=12 
+            name=Fdadsage> &nbsp; <INPUT onclick=Variable(this.form) type=button value=输入背景色 name=BUTTON> 
+            </SPAN></CENTER></FORM></TD></TR></TABLE></CENTER></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT color=#ca00ca>■ 16 
+      常用颜色表：</FONT></DIV></TD></TR>
+  <TR>
+    <TD class=article>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        
+        <TR bgColor=#d900d9>
+          <TD><SPAN><FONT color=#ffffff><B>Color</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Value</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Name</B></FONT></SPAN></TD>
+          <TD bgColor=#cce6e6><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Color</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Value</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Name</B></FONT></SPAN></TD></TR>
+        <TR>
+          <TD bgColor=aqua><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00FFFF</SPAN></TD>
+          <TD><SPAN>aqua</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=gray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#808080</SPAN></TD>
+          <TD><SPAN>gray</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=navy><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#000080</SPAN></TD>
+          <TD><SPAN>navy</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=silver><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#C0C0C0</SPAN></TD>
+          <TD><SPAN>silver</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=black><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#000000</SPAN></TD>
+          <TD><SPAN>black</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=green><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#008000</SPAN></TD>
+          <TD><SPAN>green</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=olive><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#808000</SPAN></TD>
+          <TD><SPAN>olive</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=teal><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#008080</SPAN></TD>
+          <TD><SPAN>teal</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=blue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000FF</SPAN></TD>
+          <TD><SPAN>blue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lime><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00FF00</SPAN></TD>
+          <TD><SPAN>lime</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=purple><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#800080</SPAN></TD>
+          <TD><SPAN>purple</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=yellow><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFF00</SPAN></TD>
+          <TD><SPAN>yellow</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=fuchsia><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF00FF</SPAN></TD>
+          <TD><SPAN>fuchsia</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=maroon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#800000</SPAN></TD>
+          <TD><SPAN>maroon</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=red><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF0000</SPAN></TD>
+          <TD><SPAN>red</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=white><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFFFF</SPAN></TD>
+          <TD><SPAN>white</SPAN></TD></TR></TABLE></TD></TR>
+  <TR>
+    <TD class=article bgColor=#bbd1d1>
+      <DIV style="FONT-SIZE: 9pt; FONT-FAMILY: 新细明体"><FONT color=#ca00ca>■ 
+      其它常用颜色表：</FONT></DIV></TD></TR>
+  <TR>
+    <TD class=article>
+      <TABLE cellSpacing=2 cellPadding=2 width="100%" border=0>
+        
+        <TR bgColor=#d900d9>
+          <TD><SPAN><FONT color=#ffffff><B>Color</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Value</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Name</B></FONT></SPAN></TD>
+          <TD bgColor=#cce6e6><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Color</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Value</B></FONT></SPAN></TD>
+          <TD><SPAN><FONT color=#ffffff><B>Name</B></FONT></SPAN></TD></TR>
+        <TR>
+          <TD bgColor=aliceblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F0F8FF</SPAN></TD>
+          <TD><SPAN>aliceblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#a00000><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A00000</SPAN></TD>
+          <TD><SPAN>antiquewith</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=aquamarine><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#7FFFD4</SPAN></TD>
+          <TD><SPAN>aquamarine</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=azure><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F0FFFF</SPAN></TD>
+          <TD><SPAN>azure</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=beige><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F5F5DC</SPAN></TD>
+          <TD><SPAN>beige</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=bisque><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFE4C4</SPAN></TD>
+          <TD><SPAN>bisque</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=black><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#000000</SPAN></TD>
+          <TD><SPAN>black</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=blanchedalmond><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFEBCD</SPAN></TD>
+          <TD><SPAN>blanchedalmond</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=blue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000FF</SPAN></TD>
+          <TD><SPAN>blue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=blueviolet><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#8A2BE2</SPAN></TD>
+          <TD><SPAN>blueviolet</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=brown><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A52A2A</SPAN></TD>
+          <TD><SPAN>brown</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=burlywood><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DEB887</SPAN></TD>
+          <TD><SPAN>burlywood</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=cadetblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#5F9EA0</SPAN></TD>
+          <TD><SPAN>cadetblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=chartreuse><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#7FFF00</SPAN></TD>
+          <TD><SPAN>chartreuse</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=chocolate><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#D2691E</SPAN></TD>
+          <TD><SPAN>chocolate</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=coral><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF7F50</SPAN></TD>
+          <TD><SPAN>coral</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#c000b0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#C0F000</SPAN></TD>
+          <TD><SPAN>cornfloewrblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=cornsilk><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFF8DC</SPAN></TD>
+          <TD><SPAN>cornsilk</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=cyan><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00FFFF</SPAN></TD>
+          <TD><SPAN>cyan</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00008B</SPAN></TD>
+          <TD><SPAN>darkblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkcyan><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#008B8B</SPAN></TD>
+          <TD><SPAN>darkcyan</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkgoldenrod><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#B8860B</SPAN></TD>
+          <TD><SPAN>darkgoldenrod</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkgray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A9A9A9</SPAN></TD>
+          <TD><SPAN>darkgray</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#006400</SPAN></TD>
+          <TD><SPAN>darkgreen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#da0000><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DA0000</SPAN></TD>
+          <TD><SPAN>darkhaki</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkmagenta><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#8B008B</SPAN></TD>
+          <TD><SPAN>darkmagenta</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkolivegreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#556B2F</SPAN></TD>
+          <TD><SPAN>darkolivegreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#da000e><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DA000E</SPAN></TD>
+          <TD><SPAN>darkorenge</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkorchid><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#9932CC</SPAN></TD>
+          <TD><SPAN>darkorchid</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkred><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#8B0000</SPAN></TD>
+          <TD><SPAN>darkred</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darksalmon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#E9967A</SPAN></TD>
+          <TD><SPAN>darksalmon</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkseagreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#8FBC8F</SPAN></TD>
+          <TD><SPAN>darkseagreen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkslateblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#483D8B</SPAN></TD>
+          <TD><SPAN>darkslateblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkslategray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#2F4F4F</SPAN></TD>
+          <TD><SPAN>darkslategray</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=darkturquoise><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00CED1</SPAN></TD>
+          <TD><SPAN>darkturquoise</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=darkviolet><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#9400D3</SPAN></TD>
+          <TD><SPAN>darkviolet</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=deeppink><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF1493</SPAN></TD>
+          <TD><SPAN>deeppink</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=deepskyblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00BFFF</SPAN></TD>
+          <TD><SPAN>deepskyblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=dimgray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#696969</SPAN></TD>
+          <TD><SPAN>dimgray</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=dodgerblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#1E90FF</SPAN></TD>
+          <TD><SPAN>dodgerblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=firebrick><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#B22222</SPAN></TD>
+          <TD><SPAN>firebrick</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=floralwhite><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFAF0</SPAN></TD>
+          <TD><SPAN>floralwhite</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=forestgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#228B22</SPAN></TD>
+          <TD><SPAN>forestgreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=gainsboro><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DCDCDC</SPAN></TD>
+          <TD><SPAN>gainsboro</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#00000e><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00000E</SPAN></TD>
+          <TD><SPAN>gostwhite</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=gold><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFD700</SPAN></TD>
+          <TD><SPAN>gold</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#00e00d><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00E00D</SPAN></TD>
+          <TD><SPAN>golenrod</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=gray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#808080</SPAN></TD>
+          <TD><SPAN>gray</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=green><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#008000</SPAN></TD>
+          <TD><SPAN>green</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=greenyellow><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#ADFF2F</SPAN></TD>
+          <TD><SPAN>greenyellow</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=honeydew><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F0FFF0</SPAN></TD>
+          <TD><SPAN>honeydew</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=hotpink><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF69B4</SPAN></TD>
+          <TD><SPAN>hotpink</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=indianred><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#CD5C5C</SPAN></TD>
+          <TD><SPAN>indianred</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=ivory><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFFF0</SPAN></TD>
+          <TD><SPAN>ivory</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=khaki><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F0E68C</SPAN></TD>
+          <TD><SPAN>khaki</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lavender><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#E6E6FA</SPAN></TD>
+          <TD><SPAN>lavender</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lavenderblush><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFF0F5</SPAN></TD>
+          <TD><SPAN>lavenderblush</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lawngreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#7CFC00</SPAN></TD>
+          <TD><SPAN>lawngreen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lemonchiffon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFACD</SPAN></TD>
+          <TD><SPAN>lemonchiffon</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#ADD8E6</SPAN></TD>
+          <TD><SPAN>lightblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lightcoral><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F08080</SPAN></TD>
+          <TD><SPAN>lightcoral</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightcyan><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#E0FFFF</SPAN></TD>
+          <TD><SPAN>lightcyan</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#00ded0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000E0</SPAN></TD>
+          <TD><SPAN>lightgodenrod</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#00dee0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000E0</SPAN></TD>
+          <TD><SPAN>lightgodenrodyellow</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#0000a0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000A0</SPAN></TD>
+          <TD><SPAN>lightgray</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#90EE90</SPAN></TD>
+          <TD><SPAN>lightgreen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lightpink><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFB6C1</SPAN></TD>
+          <TD><SPAN>lightpink</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightsalmon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFA07A</SPAN></TD>
+          <TD><SPAN>lightsalmon</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lightseagreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#20B2AA</SPAN></TD>
+          <TD><SPAN>lightseagreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightskyblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#87CEFA</SPAN></TD>
+          <TD><SPAN>lightskyblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#0000b0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000EB</SPAN></TD>
+          <TD><SPAN>lightslateblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightslategray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#778899</SPAN></TD>
+          <TD><SPAN>lightslategray</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=lightsteelblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#B0C4DE</SPAN></TD>
+          <TD><SPAN>lightsteelblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=lightyellow><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFFE0</SPAN></TD>
+          <TD><SPAN>lightyellow</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=limegreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#32CD32</SPAN></TD>
+          <TD><SPAN>limegreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=linen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FAF0E6</SPAN></TD>
+          <TD><SPAN>linen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=magenta><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF00FF</SPAN></TD>
+          <TD><SPAN>magenta</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=maroon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#800000</SPAN></TD>
+          <TD><SPAN>maroon</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mediumaquamarine><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#66CDAA</SPAN></TD>
+          <TD><SPAN>mediumaquamarine</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=mediumblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0000CD</SPAN></TD>
+          <TD><SPAN>mediumblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mediumorchid><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#BA55D3</SPAN></TD>
+          <TD><SPAN>mediumorchid</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#ed0000><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#ED0000</SPAN></TD>
+          <TD><SPAN>mediumpurpul</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mediumseagreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#3CB371</SPAN></TD>
+          <TD><SPAN>mediumseagreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=mediumslateblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#7B68EE</SPAN></TD>
+          <TD><SPAN>mediumslateblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mediumspringgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00FA9A</SPAN></TD>
+          <TD><SPAN>mediumspringgreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=mediumturquoise><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#48D1CC</SPAN></TD>
+          <TD><SPAN>mediumturquoise</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mediumvioletred><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#C71585</SPAN></TD>
+          <TD><SPAN>mediumvioletred</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=midnightblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#191970</SPAN></TD>
+          <TD><SPAN>midnightblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=mintcream><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F5FFFA</SPAN></TD>
+          <TD><SPAN>mintcream</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=mistyrose><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFE4E1</SPAN></TD>
+          <TD><SPAN>mistyrose</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=moccasin><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFE4B5</SPAN></TD>
+          <TD><SPAN>moccasin</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=navajowhite><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFDEAD</SPAN></TD>
+          <TD><SPAN>navajowhite</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=navy><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#000080</SPAN></TD>
+          <TD><SPAN>navy</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#a0b0e0><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A0B0E0</SPAN></TD>
+          <TD><SPAN>navyblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=oldlace><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FDF5E6</SPAN></TD>
+          <TD><SPAN>oldlace</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=olivedrab><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#6B8E23</SPAN></TD>
+          <TD><SPAN>olivedrab</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=orange><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFA500</SPAN></TD>
+          <TD><SPAN>orange</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#0e0eed><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#0E0EED</SPAN></TD>
+          <TD><SPAN>orengered</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=orchid><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DA70D6</SPAN></TD>
+          <TD><SPAN>orchid</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=#a00d00><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A00D00</SPAN></TD>
+          <TD><SPAN>palegodenrod</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=palegreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#98FB98</SPAN></TD>
+          <TD><SPAN>palegreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=paleturquoise><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#AFEEEE</SPAN></TD>
+          <TD><SPAN>paleturquoise</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=palevioletred><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DB7093</SPAN></TD>
+          <TD><SPAN>palevioletred</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=papayawhip><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFEFD5</SPAN></TD>
+          <TD><SPAN>papayawhip</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=peachpuff><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFDAB9</SPAN></TD>
+          <TD><SPAN>peachpuff</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=peru><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#CD853F</SPAN></TD>
+          <TD><SPAN>peru</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=pink><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFC0CB</SPAN></TD>
+          <TD><SPAN>pink</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=plum><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#DDA0DD</SPAN></TD>
+          <TD><SPAN>plum</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=powderblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#B0E0E6</SPAN></TD>
+          <TD><SPAN>powderblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=purple><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#800080</SPAN></TD>
+          <TD><SPAN>purple</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=red><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF0000</SPAN></TD>
+          <TD><SPAN>red</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=rosybrown><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#BC8F8F</SPAN></TD>
+          <TD><SPAN>rosybrown</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=royalblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#4169E1</SPAN></TD>
+          <TD><SPAN>royalblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=saddlebrown><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#8B4513</SPAN></TD>
+          <TD><SPAN>saddlebrown</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=salmon><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FA8072</SPAN></TD>
+          <TD><SPAN>salmon</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=sandybrown><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F4A460</SPAN></TD>
+          <TD><SPAN>sandybrown</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=seagreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#2E8B57</SPAN></TD>
+          <TD><SPAN>seagreen</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=seashell><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFF5EE</SPAN></TD>
+          <TD><SPAN>seashell</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=sienna><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#A0522D</SPAN></TD>
+          <TD><SPAN>sienna</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=skyblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#87CEEB</SPAN></TD>
+          <TD><SPAN>skyblue</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=slateblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#6A5ACD</SPAN></TD>
+          <TD><SPAN>slateblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=slategray><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#708090</SPAN></TD>
+          <TD><SPAN>slategray</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=snow><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFAFA</SPAN></TD>
+          <TD><SPAN>snow</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=springgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00FF7F</SPAN></TD>
+          <TD><SPAN>springgreen</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=steelblue><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#4682B4</SPAN></TD>
+          <TD><SPAN>steelblue</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=tan><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#D2B48C</SPAN></TD>
+          <TD><SPAN>tan</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=thistle><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#D8BFD8</SPAN></TD>
+          <TD><SPAN>thistle</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=tomato><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FF6347</SPAN></TD>
+          <TD><SPAN>tomato</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=turquoise><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#40E0D0</SPAN></TD>
+          <TD><SPAN>turquoise</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=violet><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#EE82EE</SPAN></TD>
+          <TD><SPAN>violet</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#00e0ed><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#00E0ED</SPAN></TD>
+          <TD><SPAN>violetred</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=wheat><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F5DEB3</SPAN></TD>
+          <TD><SPAN>wheat</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=#000e><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#000E00</SPAN></TD>
+          <TD><SPAN>hite</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=whitesmoke><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#F5F5F5</SPAN></TD>
+          <TD><SPAN>whitesmoke</SPAN></TD></TR>
+        <TR>
+          <TD bgColor=yellow><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#FFFF00</SPAN></TD>
+          <TD><SPAN>yellow</SPAN></TD>
+          <TD><SPAN>&nbsp;</SPAN></TD>
+          <TD bgColor=yellowgreen><SPAN>&nbsp;</SPAN></TD>
+          <TD><SPAN>#9ACD32</SPAN></TD>
+          <TD><SPAN>yellowgreen</SPAN></TD></TR></TABLE></TD></TR></TABLE></b></font></span></p>
+
+</body>
+
+</html>

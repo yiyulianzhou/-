@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>html所有标签以及属性</title>
+	<style>pre{font-size:18px;}h1,h2{color:red;margin:1px;padding:1px;}pre{margin:0px;}#top{display:block;text-align:center;line-height:50px;width:50px;height:50px;position:fixed;bottom:50px;right:50px;background:lightgreen;font-size:14px;}</style>
+</head>
+<body>
+<a name="totop"></a>
+<h1>html标签及属性一览表</h1>
+<hr/>
+目录<br/>
+<a href="#html">html整体结构</a><br/>
+<a href="#geshi">格式标签</a><br/>
+<a href="#wenben">文本标签</a><br/>
+<a href="#table">表格标签</a><br/>
+<a href="#a">a标签</a><br/>
+<a href="#img">图片标签</a><br/>
+<a href="#form">表单标签</a><br/>
+<a href="#frameset">框架|分桢</a><br/>
+<a href="#b">实体符号</a><br/>
+<hr/>
+<a name="html"></a>
+<h2>html整体结构</h2>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;标题&lt;/title&gt;
+		&lt;meta charset="utf-8"/&gt;
+		&lt;meta http-equiv="content-type" content="text/html; charset=utf-8"&gt;
+		&lt;meta name="keywords" content="8-12个以英文逗号分隔的单词或者词语"/&gt;
+		&lt;meta name="description" content="80字以内的一段话，与网站内容有关"/&gt;
+		&lt;link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/&gt;
+		&lt;meta name="author" name="author"/&gt;
+		&lt;meta name="copyright" content="2008-2015版权所有"/&gt;
+		&lt;meta http-equiv="refresh" content="3;url=https://www.baidu.com/"/&gt;
+		&lt;base href="http://www.baidu.com" target="_blank"&gt;
+		&lt;link rel="stylesheet" type="text/css" href="css.css"&gt;
+		&lt;script type="text/javascript" src="js.js"&gt;&lt;/script&gt; 
+	&lt;/head&gt;
+	&lt;boyd&gt;
+	&lt;/boyd&gt;
+&lt;/html&gt;
+
+</pre>
+<hr/>
+<!--
+<pre>
+结构：
+html>(head>title+meta+link)+body
+
+head中的标签
+	title
+	meta
+		charset  utf-8|gbk|gb2312
+		name
+			keywords     关键字
+			description  网站描述
+			author       作者
+			copyright    版权
+		content       自定义信息|text/html;charset=utf-8|3;url=http://www.baidu.com
+		http-equiv	  refresh|Content-Type
+	link
+		rel    stylesheet
+		type   text/css
+		href   css路径
+	style   css嵌入
+	script  javascript嵌入或者外部引入
+	base
+		href    设置网站默认跟路径
+		target  设置网站默认的打开方式
+</pre>
+-->
+<a name="geshi"></a>
+<h2>格式标签:</h2>
+<pre>
+hr：水平线
+br：换行
+p：段落
+pre：按照原文输出，不支持标签直接输出
+center：居中
+ol：有序列表
+ul：无序列表
+li：列表中的项目
+</pre>
+<hr/>
+<a name="wenben"></a>
+<h2>文本标签</h2>
+<pre>
+u：下划线
+i：斜体
+b：粗体
+s：中划线
+em：斜体(强调)
+strong：粗体(强调)
+big：大的
+small：小的
+sub：下标
+sup：上标
+tt：打印机字体
+cite：牵引
+h1-h6：标题
+font=>color,size=1-7：字体设置
+</pre>
+<hr/>
+<a name="table"></a>
+<h2>表格标签</h2>
+<pre>
+结构
+table=>caption+tr=>td|th
+table：表格
+	width：宽度
+	height：高度
+	border：边框
+	bgcolor：背景颜色
+	background：背景图片
+	cellspacing：单元格间距(外间距)
+	cellpadding：单元格与内容间距(内间距)
+	align：当对于外边的水平对齐方式
+caption：表格标题
+tr
+	height：高度
+	bgcolor：背景颜色
+	align：水平对齐方式  left|center|right
+	valign：垂直对齐方式 top|middle|bottom
+td|th
+	width：宽度
+	height：高度
+	bgcolor：背景颜色
+	align：水平对齐方式	  left|center|right
+	valign：垂直对齐方式  top|middle|bottom
+	colspan：合并列
+	rowspan：合并行
+注意：tr没有宽度
+</pre>
+<hr/>
+<a name="a"></a>
+<h2>a标签</h2>
+<pre>
+a
+	href：跳转的url地址
+	target：打开方式    _self|_blank|_top|_parent|framename(自定义)
+	title：鼠标停留时的提示文字
+	name：名字(定义锚点时配合#用)
+</pre>
+<hr/>
+<a name="img"></a>
+<h2>img标签</h2>
+<pre>
+img
+	src：图片的url地址
+	width：宽度
+	height：高度
+	border：边框
+	alt：当图片不正常显示时的代替文字
+</pre>
+<hr/>
+<a name="form"></a>
+<h2>form表单相关标签</h2>
+<pre>
+结构：
+form=>input|select=>option|textarea
+form
+	action：数据接受的url文件地址
+	method：提交的方式	get|post
+	enctype="multipart/form-data"	//上传文件时定义
+input
+	type：类型
+	name：名字
+	value：值
+	size：大小(可以设置text框的长度)
+	disabled：禁止(无值属性)
+	checked：选中(无值属性)
+	readonly：只读(无值属性)
+	placeholder：提示文字(html5)
+
+其中type属性的值：
+	text：文本框
+	password：密码框
+	radio：单选框	  同一组radio的name值必须相同
+	checkbox：复选框  name的值后面要加[]
+	submit：提交按钮  有提交功能
+	button：普通按钮  没有提交功能
+	image：图片按钮   有提交功能
+	reset：重置按钮
+	file：文件域
+	hidden：隐藏域    传递不让用户看见的数据
+	email：邮箱 (html5)
+
+select：下拉框
+	name：名字
+	size：显示的选项数量
+	multiple：设置可以多选(无值属性)
+	disabled：禁止(无值属性)
+option：选项
+	value：值
+	disabled：禁止(无值属性)
+	selected：选中(无值属性)
+textarea：多行文本域
+	name：名字
+	cols：列数
+	rows：行数
+	disabled：禁止(无值属性)
+	readonly：只读(无值属性)
+	maxlength：最大可输入长度
+</pre>
+<hr/>
+<a name="frameset"></a>
+<h2>frameset框架</h2>
+<pre>
+结构:
+frameset=>frame
+frameset
+	cols：分列的定义 可以用百分比或者像素，值用英文的逗号隔开(,) *表示剩下的所有
+	rows：分行的定义
+	border：边框
+	frameborder：是否显示边框 yes|no
+frame
+	href：显示的页面url地址
+	name：名字
+	scrolling：是否显示滚动条 yes|no
+	noresize：禁止拖动
+
+注意事项：frameset不能和body标签一起使用。
+</pre>
+<hr/>
+<a name="b"></a>
+<h2>实体符号</h2>
+<pre>
+	&amp;quot; &quot;
+  	&amp;amp;  &amp;
+  	&amp;lt;   &lt;
+  	&amp;gt;   &gt;
+  	&amp;nbsp; 空格
+  	&amp;copy; &copy;
+  	&amp;sect; &sect;
+  	&amp;curren; &curren;
+  	&amp;times; &times;
+	&amp;yen; &#165;  &yen;  
+</pre>
+<!--
+<h2>其他事项</h2>
+
+<pre>
+关于路径
+./a.jpg  表示当前目录下的a.jpg
+../a.jpg 表示上级目录下的a.jpg
+/a.jpg   表示跟目录下的a.jpg   根目录(顶级目录)
+a.jpg    表示当前目录下的a.jpg 等价于 ./a.jpg 
+
+url的构成
+http://www.baidu.com:80/book/index.php?name=zhangsan&age=21
+释义：
+http://：协议
+www.baidu.com：主机名
+80：端口号，http服务器默认80
+book：目录名称
+index.php：资源名
+name：参数名1
+zhangsan：参数值1
+&：参数分隔符
+age：参数名2
+21：参数值2
+</pre>
+-->
+<a id="top" href="#totop" target="_self">顶部</a>
+</body>
+</html>
