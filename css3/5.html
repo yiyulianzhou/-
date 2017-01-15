@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*
+		和布局相关的属性
+			display 规定元素如何显示
+				none 隐藏 不占位
+				inline 以行级元素的特点来显示
+				block  以块级元素的特点来显示
+				inline_block 以行级块元素的特点来显示
+		*/
+		*{
+			padding:0px;margin:0px;
+		}
+		div{
+			width:100px;
+			height:100px;
+			font-size:25px;
+			display:inline;
+		}
+		.pp{
+			display:inline-block;
+			border:1px solid #f00;
+			height:60px;
+		}
+		#box1{
+			background-color:#99f;
+		}
+		#box2{
+			background-color:#fc3;
+
+		}
+		#box3{
+			background-color:#f3c;
+		}
+		span{
+			display:block;
+			height:50px;
+		}
+	</style>
+</head>
+<body>
+	<div id='box1'>box1</div>
+	<div id='box2'>box2</div>
+	<div id='box3'>box3</div>
+
+	<hr />
+	<span>山不解释自己的高度，并不影响它的耸立云端；</span>
+	<span>海不解释自己的深度，并不影响它容纳百川；</span>
+	<span>地不解释自己的厚度，但没有谁能取代它承载万物的地位！</span>
+
+	<hr />
+	<div class="pp">11</div>
+	<div class="pp">11</div>
+	<div class="pp">11</div>
+	<div class="pp">11</div>
+</body>
+</html>

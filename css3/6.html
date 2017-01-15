@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV + CSS 布局</title>
+	<style>
+		/*
+		和布局相关的属性
+			visibility 规定元素是否可见
+				visible 默认属性
+				hidden 	隐藏 占位
+				inherit 继承 子元素默认继承父元素的此属性
+		*/
+		*{padding:0px;margin:0px;}
+		div{
+			width:100px;
+			height:100px;
+			font-size:25px;
+		}
+		#box1{
+			background-color:#99f;
+			visibility:hidden;
+		}
+		#box2{
+			background-color:#fc3;
+		}
+		#box3{
+			background-color:#f3c;
+			visibility:visible;
+		}
+		#box{
+			visibility:hidden;
+		}
+	</style>
+</head>
+<body>
+	<div id='box1'>box1</div>
+	<div id='box2'>box2</div>
+
+	<div id='box'>
+		<div id='box3'>box3</div>
+	</div>
+</body>
+</html>

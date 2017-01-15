@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV + CSS 布局</title>
+	<style>
+		/*
+		和布局相关的属性
+		position 定位
+			用来操控元素的位置
+			absolute 绝对定位
+			定位规则：
+			1.脱离文档流，不保留自己的位置
+			2.指定上下左右的值，位置没有改变，只是脱离文档流
+			3.定位是根据上一个有定位属性的父级元素来判断的。
+			4.如果父级元素没有定位属性，就是body
+
+			relative 相对定位
+			fixed 	 固定定位
+
+			配合position可使用一下属性：
+			top/left/right/bottom 值：px %
+		*/
+		*{padding:0px;margin:0px;}
+		div{
+			width:100px;
+			height:100px;
+			font-size:25px;
+		}
+		#box1{
+			background-color:#99f;
+			position:relative;
+			left:30px;
+			top:50px;
+		}
+		#box2{
+			background-color:#fc3;
+		}
+		#box3{
+			background-color:#f3c;
+		}
+	</style>
+</head>
+<body>
+	<div id="box1">box1</div>
+	<div id="box2">box2</div>
+
+	<div id="box3">box3</div>
+
+</body>
+</html>

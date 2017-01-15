@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*
+			盒子模型
+			组成
+			width 宽
+			height 高
+			padding 内边距
+
+			margin 外边距
+				1个值 上右下左
+				2个值 上(下)/右(左)
+				3个值 上/右(左)/下
+				4个值 上/右/下/左
+			border 边框
+		*/
+		td{
+			border:1px solid #f00;
+		}
+		*{padding:0px;margin:0px;}
+		div{
+			border:1px solid #00f;
+			width:300px;
+			height:100px;
+			/*margin-top:20px;
+			margin-right:40px;
+			margin-bottom:80px;
+			margin-left:100px;*/
+			/*margin:20px 40px 80px 100px;*/
+			margin:50px 200px 10px;
+			padding:50px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<div>my name is content</div>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

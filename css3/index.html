@@ -1,0 +1,53 @@
+<!doctype html>
+!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV + CSS 布局</title>
+	<style>
+		/*
+		和布局相关的属性
+			浮动布局
+			float 浮动脱离文档流，不保留位置
+				left 左浮动
+				right 右浮动
+			clear 清除浮动
+				left 清除左浮动
+				right 清除右浮动
+				both 清除两侧浮动
+		*/
+		*{padding:0px;margin:0px;}
+		div{
+			width:100px;
+			height:100px;
+			font-size:25px;
+			float:left;
+		}
+		#box1{
+			background-color:#99f;
+			
+		}
+		#box2{
+			background-color:purple;
+		}
+		#box3{
+			background-color:#f3c;
+			clear:left;
+		}
+		#box4{
+			background-color:#ccc;
+			clear:left;
+		}
+		#box5{
+			background-color:#0ff;
+		}
+	</style>
+</head>
+<body>
+	<div id='box1'>1</div>
+	<div id='box2'></div>
+	<div id='box3'></div>
+	<div id='box4'></div>
+	<div id='box5'></div>
+</body>
+</html>
