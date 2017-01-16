@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<title>DIV + CSS布局</title>
+	<link rel="stylesheet" href="./my.css">
+</head>
+<body>
+	<div id="header" class="w1000_c">
+		<div class="top_l bgr fl"></div>
+		<div class="top_r fr">
+			<div class="top_c bgr fl"></div>
+			<div class="top_l bgr fr"></div>
+		</div>
+		<div class="clear"></div>
+		<nav class="mt20">
+			<ul>
+				<li><a href="#">首页</a></li>
+				<li><a href="#">电器</a></li>
+				<li><a href="#">家具</a></li>
+				<li><a href="#">成人用品</a></li>
+				<li><a href="#">婴儿用品</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="clear"></div>
+	<div id="main" class="w1000_c mt20">
+		<!--ml-->
+		<div class="ml fl">
+			<div class="con fl bgc"></div>
+			<div class="con fr">
+				<div class="c_sub">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+				<div class="c_sub mt50">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+			</div>
+			<div class="clear mt40"></div>
+			<div class="con fl bgc"></div>
+			<div class="con fr">
+				<div class="c_sub">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+				<div class="c_sub mt50">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+			</div>
+			<div class="clear mt40"></div>
+			<div class="con fl bgc"></div>
+			<div class="con fr">
+				<div class="c_sub">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+				<div class="c_sub mt50">
+					<div class="s_box fl bgc"></div>
+					<div class="s_box fr bgc"></div>
+				</div>
+			</div>
+		</div>
+
+		<!--ml END-->
+		<!--mr-->
+		<div class="mr fr">
+			<div class="mr_box">
+				<div class="mr_sub fl bgr"></div>
+				<div class="mr_sub fr bgr"></div>
+			</div>
+			<div class="mr_box mt40">
+				<div class="mr_sub fl bgr"></div>
+				<div class="mr_sub fr bgr"></div>
+			</div>
+			<div class="mr_box mt40">
+				<div class="mr_sub fl bgr"></div>
+				<div class="mr_sub fr bgr"></div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--mr END-->
+		<div class="clear"></div>
+	</div>
+	<div id="footer" class="mt30 w1000_c bgc"></div>
+</body>
+</html>
