@@ -1,27 +1,29 @@
 <?php 
-	header("content-type:text/html;charset=utf-8");
+	header("Content-type:text/html;charset=utf-8");
+	date_default_timezone_set("PRC");
+	/*
+	文件系统处理
+	文件类型
+	WINDOWS:
+		dir 	目录
+		file  	文件
+		unknow 	未知类型(见图 unkonow.jpg)
 
-	/**
-	 * fgets() 读取一行 参2可指定读取本行的长度
-	 * fgetc() 读取一个字节
-	 * feof() 测试文件指针是否到了文件结束的位置
-	 * EOF 字符End Of File
-	 */
-	
-	$file = './test.txt';
+	UNIX:
+		block 块设备文件,如磁盘分区/软驱/光驱/CD_ROM
+		char  字符设备,指在I/O传输过程中，以字符为单位进行传输的设备，例如键盘/打印机
+		dir   目录
+		fifo  命名管道
+		file  普通文件类型，如文本文件或可执行文件
+		link  符号链接
+		unkonw 未知类型
+	获取文件的类型
+	filetype()
+	*/
 
-	$handle = fopen($file,'r');
-
-	echo fgets($handle);//每次只读取一行的内容，包括空行
-	echo fgetc($handle);//每次只读取一个字节
-	echo fgetc($handle);//每次只读取一个字节
-	echo fgetc($handle);//每次只读取一个字节
-	echo fgetc($handle);//每次只读取一个字节
-
-	while(!feof($handle)){
-		$str = fgets($handle);
-		echo nl2br($str);
-	}
-	fclose($handle);
-
-	echo nl2br($str);
+	echo '<h2>文件类型</h2>';
+	echo filetype('./imgs');
+	echo '<br />';
+	echo filetype('./imgs/1.jpg');
+	echo '<br />';
+	echo filetype('./test');
