@@ -1,0 +1,35 @@
+自行选择以下需要配置项目
+
+Preferences->Settings-User(或 首选项--->设置-用户)
+以下内容写入页面的花括号之内
+注意每个配置项目之间,用逗号分隔
+
+    //win下,DPI放大设置时,覆盖操作系统设置的DPI
+    "dpi_scale": 1.0,
+
+    //字体样式
+    "font_face": "monaco",
+
+    //字体大小
+    "font_size": 15,
+
+    //是否记住打开的文件
+    "remember_open_files": false,
+
+    //tab为4个空格的长度
+    "tab_size": 4,
+
+    //将tab转换为空格
+    "translate_tabs_to_spaces": true,
+
+    //关闭自动更新
+    "update_check": false,
+
+    //开启文字换行
+    "word_wrap": "true",
+
+    //显示tab 空格 等不可见字符
+    "draw_white_space": "all",
+
+    //默认换行符为Unix(LF)
+    "default_line_ending":"unix",

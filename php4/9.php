@@ -1,7 +1,7 @@
 <?php 
 	header("Content-type:text/html;charset=utf-8");
 
-	/**
+	/*
 	 计数型的循环
 	 for(初始值;条件;增量){
 		循环体
