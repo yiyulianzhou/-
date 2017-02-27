@@ -44,28 +44,28 @@
             {n,}    匹配其前面 的原子出现 至少n次
             {n,m}   匹配其前面 的原子出现 至少n次，至多m次
          3.2 边界限制
-         ^ 或 \A 匹配字符串必须以某个字符开始
-         $ 或 \Z 匹配字符串以某个字符结束
-
-         \b 单词边界
-         \B 除了单词边界以外的部分
          3.3 句号
-         . 匹配任何一个字符，除了换行符(\n)
          3.4 模式选择符
-         | 在多个模式之间，选择匹配一个匹配到的那个模式
          3.5 模式单元
          3.6 后向引用
          4.模式修正符
-
         */
-    $str = "12345\nagcdef+";
-    $regex = './........../';
-    $regex = '/.+/';
+    $str = 'dfdbsbadfadfadfaf';
+    $regex = '/\w*/';
 
-    $str = 'ftps://www.baidu.com';
-    $regex = '/https|http|ftps|ftp/';
+    $str = 'cooooooooool';
+    $regex = '/co*l/';
 
-     if (preg_match_all($regex,$str,$arr)) {
+    $str = 'cool';
+    $regex = '/co?l/';
+
+    $str = 'cl';
+    $regex = '/c\w{1,3}l/';
+
+    $str = 'BBC';
+    $regex = '/[ABC]{3}/';
+
+    if (preg_match_all($regex,$str,$arr)) {
              echo '正则表达式<font size="5" color="green">'.$regex.'</font>匹配字串<font size="5" color="green">'.$str.'</font>成功';
              echo '<pre>';
              var_dump($arr);

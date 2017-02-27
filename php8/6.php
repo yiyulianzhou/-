@@ -52,20 +52,21 @@
          3.3 句号
          . 匹配任何一个字符，除了换行符(\n)
          3.4 模式选择符
-         | 在多个模式之间，选择匹配一个匹配到的那个模式
          3.5 模式单元
          3.6 后向引用
          4.模式修正符
-
         */
-    $str = "12345\nagcdef+";
-    $regex = './........../';
-    $regex = '/.+/';
+    $str = 'cooooooooool';
+    $regex ='/^co*l$/';
 
-    $str = 'ftps://www.baidu.com';
-    $regex = '/https|http|ftps|ftp/';
+    $str = "this is island";
+    $regex = '/is/';
+    $regex = '/\bis/';
+    $regex = '/is\b/';
+    //$regex = '/is\B/';
 
-     if (preg_match_all($regex,$str,$arr)) {
+
+    if (preg_match_all($regex,$str,$arr)) {
              echo '正则表达式<font size="5" color="green">'.$regex.'</font>匹配字串<font size="5" color="green">'.$str.'</font>成功';
              echo '<pre>';
              var_dump($arr);

@@ -66,9 +66,9 @@
     $regex = '/https|http|ftps|ftp/';
 
      if (preg_match_all($regex,$str,$arr)) {
-             echo '正则表达式<font size="5" color="green">'.$regex.'</font>匹配字串<font size="5" color="green">'.$str.'</font>成功';
-             echo '<pre>';
-             var_dump($arr);
+            echo '正则表达式<font size="5" color="green">'.$regex.'</font>匹配字串<font size="5" color="green">'.$str.'</font>成功';
+            echo '<pre>';
+            var_dump($arr);
          } else {
             echo '正则表达式<font size="5" color="green">'.$regex.'</font>匹配字串<font size="5" color="green">'.$str.'</font>失败';
          }
