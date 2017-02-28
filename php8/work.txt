@@ -1,0 +1,31 @@
+0.note.php   X3 带数字的不用打    1.PHP  X3   2.PHP X1
+
+1.编写一个函数,使用正则替换方式能够实现清除字符串中的所有HTML标签.
+
+
+2.将下面文件中的代码中所有的图片标签匹配出来，
+并以表格方式输出信息 图见work.jpg
+<div class="clearfix goodsBox">
+    <a href="goods.php?id=24">
+        <img src="images/111.jpg" alt="Smartisan T2">
+    </a><br>
+    <a href="goods.php?id=25">
+        <img src="images/222.jpg" alt="apple 6s">
+    </a><br>
+    <a href="goods.php?id=26">
+        <img src="images/333.jpg" alt="小米note3">
+    </a><br>
+    <a href="goods.php?id=27">
+        <img src="images/444.jpg" alt="坚果手机">
+    </a><br>
+    <a href="goods.php?id=28">
+        <img src="images/555.jpg" alt="魅蓝手机">
+    </a><br>
+    <a href="goods.php?id=29">
+        <img src="images/666.jpg" alt="oppo r7">
+    </a><br>
+</div>
+
+
+3.使用php正则对表单数据验证
+
