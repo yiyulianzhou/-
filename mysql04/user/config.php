@@ -1,0 +1,14 @@
+<?php 
+    //定义配置项
+    //主机名
+    define('HOST','localhost');
+    //用户名
+    define('USER','root');
+    //密码
+    define('PWD','123456');
+    //数据库
+    define('DB','s60');
+    //字符集
+    define('CHAR','utf8');
+    //表前缀
+    define('PRE','s60_');   

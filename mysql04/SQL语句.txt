@@ -1,0 +1,98 @@
+单表查询
+    ============================
+    SELECT 字段列表
+         FROM 表名
+         [WHERE 条件表达式]
+         [GROUP BY 字段名1 [HAVING 条件表达式2]]
+         [ORDER BY 字段名2 [ASC|DESC]]
+         [LIMIT]
+    ============================
+    1.查询所有字段
+        select * from user;
+    2.查询指定字段
+        select name,sex form user;
+
+
+    ============================
+    WHERE子句的条件：
+    比较 = < <= > >= != <>  
+    指定范围 BETWEEN AND、NOT BETWEEN AND
+    指定集合 IN、NOT IN     
+    匹配字符 LIKE、NOT LIKE 
+    是否为空值 IS NULL、IS NOT NULL
+    多个条件查询 AND、OR
+    ============================
+    3.查询指定记录
+        select name,sex from user where id = 5;
+    4.查询带in关键字的
+        select * from user where id in(3,4,7);
+        select * from user where not id in(3,4,7);
+    5.带between and的范围查询
+        select * from user where id between 10 and 20;
+        select * from user where id not between 10 and 20;
+    6.带like的模糊查询
+        %代表任意长度   he%         以he开头
+        _代表一个长度   he_ian       he[这里只能有一个]ian
+        select * from user where name like 'he%';
+        select * from user where name like 'a_b';   a开头b结尾，中间只有一个字符
+        select * from user where name like 'henian';  这种和使用等于一样的
+    7.查询空值
+        select * from user where name is null;
+        select * from user where name is not null;
+    8.带and的多条件查询
+    9.带or的多条件查询
+    10.查询结果去除重复
+        select distinct name from user;
+    11.对查询结果排序
+        select * from user order by age asc;
+        select * from user order by age desc;
+    12.分组查询
+        select * from user group by sex;   (默认只显示组内第一条)
+        select sex,group_concat(name) from user group by sex; 
+        select age,group_concat(name) from user group by age;
+        select age,count(*) from user group by age having count(*) > 5;
+
+        select stu.name,sum(score.score) from stu,score where stu.uid = score.uid group by score.uid;
+    13.使用Limit限制查询结果
+        select * from user limit 5;
+        select * from user limit 10,5;
+
+使用集合函数查询
+    group_concat()
+    concat()
+    count()
+    sum()
+    avg()
+    max()
+    min()
+
+连接查询
+    1.内连接查询
+    SELECT * FROM 表1,表2 WHERE 表1.字段 = 表2.字段;
+
+    2.外连接查询
+    //以左表为主
+    SELECT * FROM 表1 LEFT JOIN 表2 ON 表1.字段 = 表2.字段；
+    //以右表为主
+    SELECT * FROM 表1 RIGHT JOIN 表2 ON 表1.字段 = 表2.字段；
+
+起别名
+    1.给字段名取别名 
+    字段名 [as] 别名
+    SELECT score.name sname FROM score;
+
+    2.给表起别名
+    表名 [as] 别名
+    SELECT s.name FROM score s;
+
+子查询
+    1.带IN关键字的子查询
+    SELECT * FROM 表名 WHERE id IN (SELECT id FROM 表名 WHERE条件);
+
+    2.比较运算中的子查询
+    SELECT * FROM 表名 WHERE id > (SELECT num FROM 表名 WHERE id=1);
+
+合并查询结果
+    UNION
+    UNION ALL
+
