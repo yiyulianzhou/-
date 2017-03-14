@@ -1,19 +1,29 @@
 <?php 
-    header("Content-type:text/html;charset=utf-8");
-    //检查GD模块文件是否存在
-    //D:\wamp\bin\php\php5.6.19\ext
-    //检查GD模块是否开启
-    echo '<pre>';
-        print_r(phpinfo());
-    echo '<pre/>';
+	header("Content-type:text/html;charset=utf-8");
+	date_default_timezone_set("PRC");
+	/*
+	文件系统处理
+	文件类型
+	WINDOWS:
+		dir 	目录
+		file  	文件
+		unknow 	未知类型(见图 unkonow.jpg)
 
-    //开启GD模块
-    //extension=php_gd2.dll
+	UNIX:
+		block 块设备文件,如磁盘分区/软驱/光驱/CD_ROM
+		char  字符设备,指在I/O传输过程中，以字符为单位进行传输的设备，例如键盘/打印机
+		dir   目录
+		fifo  命名管道
+		file  普通文件类型，如文本文件或可执行文件
+		link  符号链接
+		unkonw 未知类型
+	获取文件的类型
+	filetype()
+	*/
 
-    //六脉神剑
-    //创建画布
-    //准备颜色
-    //填充背景
-    //作画
-    //保存，输出
-    //关闭资源/销毁(释放内存)
+	echo '<h2>文件类型</h2>';
+	echo filetype('./imgs');
+	echo '<br />';
+	echo filetype('./imgs/1.jpg');
+	echo '<br />';
+	echo filetype('./test');

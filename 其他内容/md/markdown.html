@@ -1,0 +1,1610 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 70%;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>markdown</title></head><body><article class="markdown-body"><h1 id="markdown"><a name="user-content-markdown" href="#markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkDown  入门</h1>
+<blockquote>
+<p>Markdown是一种简单的、轻量级的标记语法.创始人为约翰·格鲁伯（John Gruber）.它允许人们使用易读易写的纯文本格式编写文档,然后转换成有效的XHTML(或者HTML)文档.    ----来自维基百科</p>
+</blockquote>
+<p>它用简洁的语法代替排版,而不像一般我们用的字处理软件Word等有大量的排版、字体设置.软件大多是所见即所得的模式,方便使用.它是为那些需要经常码字或者进行文字排版的、对码字手速和排版顺畅度有要求的人群设计的.用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档.</p>
+<p>适用人群:需要写文档的码农、博客写手、网站小编、出版业人士等等</p>
+<blockquote>
+<p><p style="color:#f66">(本文档由XDL讲师黄超,使用MarkDown构建而成,markdown的后缀为.md)</p></p>
+</blockquote>
+<hr />
+<blockquote>
+<h3 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>文档目录</h3>
+</blockquote>
+<div class="toc">
+<ul>
+<li><a href="#markdown">MarkDown  入门</a><ul>
+<li><a href="#markdown_1">安装markdown软件</a><ul>
+<li><a href="#1-markdownpad-2">1. MarkdownPad 2 软件</a></li>
+<li><a href="#2-sublime-3-markdown">2. sublime 3 编辑器使用markdown</a></li>
+<li><a href="#3-markdown">3. 在线的MarkDown编辑器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#markdown_2">MarkDown 的常用语法介绍</a></li>
+<li><a href="#_2">基本</a></li>
+<li><a href="#_3">标题</a></li>
+<li><a href="#h1">这是 H1 一级标题</a><ul>
+<li><a href="#h2">这是 H2 二级标题</a><ul>
+<li><a href="#h3">这是 H3 三级标题</a><ul>
+<li><a href="#h4">这是 H4 四级标题</a><ul>
+<li><a href="#h5">这是 H5 五级标题</a><ul>
+<li><a href="#h6">这是 H6 六级标题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_4">列表</a><ul>
+<li><a href="#_5">无序列表</a><ul>
+<li><a href="#_6">无序列表嵌套</a></li>
+</ul>
+</li>
+<li><a href="#_7">有序列表</a></li>
+</ul>
+</li>
+<li><a href="#_8">文字格式</a></li>
+<li><a href="#_9">链接</a></li>
+<li><a href="#_10">图片</a></li>
+<li><a href="#_11">引用</a><ul>
+<li><a href="#_12">引用换行:</a></li>
+<li><a href="#_13">引用内可包含其他语法:</a></li>
+</ul>
+</li>
+<li><a href="#_14">水平分隔线</a></li>
+<li><a href="#_15">代码块</a><ul>
+<li><a href="#_16">代码语句</a></li>
+<li><a href="#_17">代码段</a></li>
+</ul>
+</li>
+<li><a href="#_18">表格</a></li>
+<li><a href="#markdown_3">列出markdown文档目录</a></li>
+<li><a href="#_19">自动转换</a></li>
+<li><a href="#end">END</a><ul>
+<li><a href="#_1">文档目录</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr />
+<h3 id="markdown_1"><a name="user-content-markdown_1" href="#markdown_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>安装markdown软件</h3>
+<blockquote>
+<p>以下软件为笔者推荐,markdown软件众多,可自行百度之&hellip;</p>
+</blockquote>
+<h5 id="1-markdownpad-2"><a name="user-content-1-markdownpad-2" href="#1-markdownpad-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>1. MarkdownPad 2 软件</h5>
+<p>若在windows环境下使用markdown,请访问<a href="http://markdownpad.com/">markdown</a>网页,下载<a href="http://markdownpad.com/download.html">MarkdownPad 2</a>.</p>
+<p><strong><em>(安装后,打开运行.若提示视图已崩溃,如下图:需安装:<a href="http://markdownpad.com/download/awesomium_v1.6.6_sdk_win.exe">Awesomium 1.6.6 SDK.</a>)</em></strong></p>
+<p><img alt="MarkdownPad 2" src="./imgs/markdown.png" /></p>
+<h5 id="2-sublime-3-markdown"><a name="user-content-2-sublime-3-markdown" href="#2-sublime-3-markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2. sublime 3 编辑器使用markdown</h5>
+<blockquote>
+<p>按crtl+shift+p 呼出Package Control<br />
+选择Install Packages(安装插件)</p>
+</blockquote>
+<p>1).搜索 Markdown Preview 插件</p>
+<blockquote>
+<p>功能1: 按 CTRL + B 生成HTML网页文件<br />
+<code>默认生成的html页面body是45em.如果想设置宽一些,建议将此值改为60~80%之间即可</code></p>
+<p>功能2: 按 ALT + M 打开为网页<br />
+在sublime里选择[首选项]&ndash;[按键绑定-用户],在打开的设置里添加如下:<br />
+为按alt+m,即可打开当前编辑的markdown文件为html网页</p>
+</blockquote>
+<pre><code>在markdown文件内,如有其他设置将以下代码添加至中括号结束之前:
+//默认打开markdown为html文件
+,{ &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview&quot;, &quot;args&quot;: {&quot;target&quot;: &quot;browser&quot;, &quot;parser&quot;:&quot;markdown&quot;} }
+
+若无其他设置,则添加以下代码
+//默认打开markdown为html文件
+[{ &quot;keys&quot;: [&quot;alt+m&quot;], &quot;command&quot;: &quot;markdown_preview&quot;, &quot;args&quot;: {&quot;target&quot;: &quot;browser&quot;, &quot;parser&quot;:&quot;markdown&quot;} }] 
+</code></pre>
+
+<p>2).搜索 OmniMarkupPreviwer 插件</p>
+<blockquote>
+<p>OmniMarkupPreviwer 实时显示<br />
+安装后使用:  </p>
+<blockquote>
+<p>crtl+alt+o 打开浏览器进入实时显示模式  (会打开一个类似于:<a href="http://127.0.0.1:51004/view/28">http://127.0.0.1:51004/view/28</a>的页面)<br />
+crtl+alt+c 复制为html代码<br />
+crtl+alt+x 导出HTML</p>
+</blockquote>
+</blockquote>
+<p>3).搜索 MarkDown Editing 插件</p>
+<blockquote>
+<p>支持Markdown语法高亮;<br />
+支持Github Favored Markdown语法;<br />
+自带3个主题.</p>
+</blockquote>
+<h5 id="3-markdown"><a name="user-content-3-markdown" href="#3-markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3. 在线的MarkDown编辑器</h5>
+<ul>
+<li><a href="http://mahua.jser.me/">MaHua</a></li>
+<li><a href="http://dillinger.io/">dillinger</a></li>
+<li><a href="http://www.jianshu.com/">简书</a></li>
+<li><a href="https://www.zybuluo.com/mdeditor">Cmd Markdown</a></li>
+</ul>
+<hr />
+<p><em>既然做好以上准备工作,那么我们开始吧!</em></p>
+<hr />
+<h1 id="markdown_2"><a name="user-content-markdown_2" href="#markdown_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkDown 的常用语法介绍</h1>
+<h1 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>基本</h1>
+<ul>
+<li>单个回车,视为空格.</li>
+<li>连续回车,才能分段(即两段内容之间有一个空行)</li>
+<li>行尾加两个空格,即可段内换行</li>
+<li>注释可使用html的注释:<br />
+<code>&lt;!--我是html的注释,在markdown内可以直接使用--&gt;</code></li>
+</ul>
+<h1 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>标题</h1>
+<pre><code>    # 这是 H1 一级标题
+    ## 这是 H2 二级标题
+    ### 这是 H3 三级标题
+    #### 这是 H4 四级标题
+    ##### 这是 H5 五级标题
+    ###### 这是 H6 六级标题
+</code></pre>
+
+<h1 id="h1"><a name="user-content-h1" href="#h1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H1 一级标题</h1>
+<h2 id="h2"><a name="user-content-h2" href="#h2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H2 二级标题</h2>
+<h3 id="h3"><a name="user-content-h3" href="#h3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H3 三级标题</h3>
+<h4 id="h4"><a name="user-content-h4" href="#h4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H4 四级标题</h4>
+<h5 id="h5"><a name="user-content-h5" href="#h5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H5 五级标题</h5>
+<h6 id="h6"><a name="user-content-h6" href="#h6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>这是 H6 六级标题</h6>
+<hr />
+<h1 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>列表</h1>
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>无序列表</h3>
+<blockquote>
+<p>注意标记符号与文字之间有空格!<br />
+* + - 三种符号均可实现无序列表</p>
+</blockquote>
+<pre><code>    * 中国
+    * 韩国
+    * 日本
+    + 德国
+    + 法国
+    + 意大利
+    - 美国
+    - 加拿大
+    - 巴西
+</code></pre>
+
+<ul>
+<li>中国</li>
+<li>韩国</li>
+<li>日本</li>
+<li>德国</li>
+<li>法国</li>
+<li>意大利</li>
+<li>美国</li>
+<li>加拿大</li>
+<li>巴西</li>
+</ul>
+<hr />
+<h5 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>无序列表嵌套</h5>
+<blockquote>
+<p>注意标记符号与文字之间有空格!</p>
+</blockquote>
+<pre><code>    * 电子数码
+      * 电脑
+      * 手机
+        * iphone
+        * 锤子手机
+    * 电器
+        * 冰箱
+        * 洗衣机
+</code></pre>
+
+<ul>
+<li>电子数码<ul>
+<li>电脑</li>
+<li>手机<ul>
+<li>iphone</li>
+<li>锤子手机</li>
+</ul>
+</li>
+<li>电器<ul>
+<li>冰箱</li>
+<li>洗衣机</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>无序列表的标记符号可以混用,建议按层级书写<br />
+使用四个空格来设置层级关系.</p>
+</blockquote>
+<pre><code>    * 中国
+        + 北京
+        + 上海
+            - 静安区
+                * XDL教育
+                * 宝尊电商
+            - 浦东新区
+                * 东方明珠电视塔
+    * 美国
+        + 纽约
+            - 曼哈顿区
+                * 自由女神像
+                * 华尔街
+                * 中央公园
+        + 华盛顿
+</code></pre>
+
+<ul>
+<li>中国<ul>
+<li>北京</li>
+<li>上海<ul>
+<li>静安区<ul>
+<li>XDL教育</li>
+<li>宝尊电商</li>
+</ul>
+</li>
+<li>浦东新区<ul>
+<li>东方明珠电视塔</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>美国<ul>
+<li>纽约<ul>
+<li>曼哈顿区<ul>
+<li>自由女神像</li>
+<li>华尔街</li>
+<li>中央公园</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>华盛顿</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>有序列表</h3>
+<blockquote>
+<p>使用数字+点的形式来表示,标记符号与文字之间依旧要有空格</p>
+</blockquote>
+<pre><code>    1. 文本
+    2. 音乐
+    3. 电影
+        1. 美国电影
+            1. &lt;&lt;蝙蝠侠大战超人&gt;&gt;
+            2. &lt;&lt;疯狂动物城&gt;&gt;
+        2. 日本电影
+</code></pre>
+
+<ol>
+<li>文本</li>
+<li>音乐</li>
+<li>电影<ol>
+<li>美国电影<ol>
+<li>&lt;&lt;蝙蝠侠大战超人&gt;&gt;</li>
+<li>&lt;&lt;疯狂动物城&gt;&gt;</li>
+</ol>
+</li>
+<li>日本电影</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h1 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>文字格式</h1>
+<pre><code>    使用 * 或 _ 来设置斜体或加粗
+    使用 ~~ 来设置文本删除线
+
+    *这是文字斜体格式*    
+    _这是文字斜体格式_
+
+    **这是文字粗体格式**    
+    __这是文字粗体格式__
+
+    ***这是文字粗体+斜体格式***    
+    ___这是文字粗体+斜体格式___
+
+    ~~这是文字删除线格式~~
+</code></pre>
+
+<p><em>这是文字斜体格式</em>  <br />
+<em>这是文字斜体格式</em></p>
+<p><strong>这是文字粗体格式</strong>  <br />
+<strong>这是文字粗体格式</strong></p>
+<p><strong><em>这是文字粗体+斜体格式</em></strong>  <br />
+<strong><em>这是文字粗体+斜体格式</em></strong></p>
+<p><del>这是文字删除线格式</del></p>
+<hr />
+<h1 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>链接</h1>
+<blockquote>
+<p>使用以下两种语法来设置链接文本,注意语法之间的空格<br />
+亦可使用<code>&lt;a&gt;&lt;/a&gt;</code>标签来设置链接</p>
+</blockquote>
+<pre><code>    1).直接设置链接(行内形式)
+      [链接名称](链接地址)
+      只要在方块括号后面紧接着圆括号并插入网址链接即可,还可以选择加入title属性
+      [链接名称](链接地址 &quot;我是title描述&quot;)
+</code></pre>
+
+<p><a href="http://www.baidu.com/">百度一下</a><br />
+<a href="http://itxdl.cn/" title="兄弟连教育官网">ITXDL</a></p>
+<pre><code>    2).间接设置,可重复使用(参考形式)
+
+      [链接名称][1]
+      参考式的链接是在链接名称的括号后面再接上另一个方括号  
+      而在第二个方括号里面要填入用以辨识链接的标记.
+
+      [1]: 链接地址 &quot;我是title描述&quot;
+      接着,在文件的任意处,你可以把这个标记的链接内容定义出来
+      链接内容定义的形式为:
+      1).方括号,里面输入链接文字
+      2).接着一个冒号
+      3).接着一个以上的空格或制表符
+      4).接着链接的网址
+      5).选择性地接着 title 内容,它可以用单引号、双引号或是括弧包着
+</code></pre>
+
+<p><a href="http://www.t.tt/" title="锤子手机">smartisan</a><br />
+<a href="http://www.t.tt/" title="锤子手机">锤子官网</a></p>
+<p><a href="https://zh.wikipedia.org/wiki/LAMP/">LAMP</a>是由<a href="https://zh.wikipedia.org/wiki/Linux/">linux</a>/<a href="https://zh.wikipedia.org/wiki/Apache_HTTP_Server/">apache</a>/<a href="https://zh.wikipedia.org/wiki/MySQL/">mysql</a>/<a href="https://zh.wikipedia.org/wiki/PHP/">php</a>构成.</p>
+<pre><code>    PS:
+      1).链接辨别标签可以有字母/数字/空白/标点符号,但是并不区分大小写: [a] [A]
+      2).链接网址也可以用尖括号包起来
+
+      3).你也可以把 title 属性放到下一行,若网址太长的话,这样会比较好看
+      4).隐式链接标记功能让你可以省略指定链接标记.
+      这种情形下,链接标记会视为等同于链接文字,  
+      要用隐式链接标记只要在链接文字后面加上一个空的方括号.
+
+      如果你要让 &quot;ACFUN&quot; 链接到 http://www.acfun.tv/,你可以简化成:
+      [ACFUN][]
+      [ACFUN]: http://www.acfun.tv/ &quot;A站&quot;
+</code></pre>
+
+<p><a href="http://huaban.com/" title="花瓣网">花瓣</a></p>
+<p><a href="https://www.chromeexperiments.com/globe" title="GOOGLE全球统计">google统计</a></p>
+<p><a href="http://www.acfun.tv/" title="A站">ACFUN</a></p>
+<hr />
+<h1 id="_10"><a name="user-content-_10" href="#_10" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>图片</h1>
+<blockquote>
+<p>图片的语法和链接很相似<br />
+注意: markdown无法设置图片的宽高,如有需要,可自行添加<code>&lt;img&gt;</code>标签  </p>
+<blockquote>
+<p>图片值得注意之处: 若是本地图片,那么markdown就会生成绝对地址给你引用图片.<br />
+所以,想要正常的在markdown内展示自己添加的图片,还是选择一个网络的图床吧.<br />
+推荐使用 七牛云存储 或 微博图片 等.</p>
+</blockquote>
+</blockquote>
+<pre><code>    1).行内形式: title为可选设置
+      ![替代文本](链接地址)
+      ![替代文本](链接地址 &quot;我是title描述&quot;)
+
+    2).参考形式
+      ![替代文本][1]
+      [1]: 链接地址
+      设置title描述:
+      [2]: 链接地址 &quot;我是title描述&quot;
+      需要注意: 链接地址的数字号与普通的链接共享.
+</code></pre>
+
+<p><img alt="google动图" src="./imgs/01.gif" title="google涂鸦" /><br />
+<img alt="美女和喵" src="./imgs/02.jpg" title="美喵" /><img alt="美女和喵" src="./imgs/03.jpg" title="小黑" /> </p>
+<hr />
+<h1 id="_11"><a name="user-content-_11" href="#_11" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>引用</h1>
+<pre><code>    &gt; 设置引用文本
+    &gt;&gt; 设置嵌套的引用文本
+</code></pre>
+
+<blockquote>
+<p>我是引用的文本</p>
+<blockquote>
+<p>哎呀,好巧! 我也是引用文本!(嵌套)</p>
+</blockquote>
+</blockquote>
+<h3 id="_12"><a name="user-content-_12" href="#_12" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>引用换行:</h3>
+<pre><code>    关于引用文本换行
+    &gt; 设置第一行,这一行末尾有两个空格  
+    &gt; 使用大于号继续标记使用  
+    亦可直接写入换行的引入文本
+</code></pre>
+
+<blockquote>
+<p>设置第一行,这一行末尾有两个空格<br />
+使用大于号继续标记使用<br />
+直接写入换行的引入文本</p>
+</blockquote>
+<h3 id="_13"><a name="user-content-_13" href="#_13" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>引用内可包含其他语法:</h3>
+<pre><code>    引用文本内也可以使用其他的Markdown语法,包括标题、列表、代码区块等:
+    &gt; 我是一段引用  
+    &gt;     echo '我是一段输出PHP代码';
+
+</code></pre>
+
+<blockquote>
+<ul>
+<li>网页三剑客<ul>
+<li>html</li>
+<li>css</li>
+<li>javascript</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>echo '我是一段输出PHP代码';</code></p>
+<pre><code> echo '我是一段输出PHP代码';(注意空格数量!)
+</code></pre>
+</blockquote>
+</blockquote>
+<hr />
+<h1 id="_14"><a name="user-content-_14" href="#_14" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>水平分隔线</h1>
+<blockquote>
+<p>可以在一行中用三个以上的星号、减号、下划线来建立一个分隔线,行内不能有其他东西.<br />
+也可以在星号或是减号或下划线中间插入空格</p>
+</blockquote>
+<pre><code>    ---
+    ___
+    ***
+    - - - -
+    * * * *
+</code></pre>
+
+<hr />
+<hr />
+<hr />
+<h1 id="_15"><a name="user-content-_15" href="#_15" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>代码块</h1>
+<h3 id="_16"><a name="user-content-_16" href="#_16" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>代码语句</h3>
+<p>如果要标记一小段行内代码,你可以用反引号(`)把它包起来</p>
+<p>一句代码: <code>echo '123456';</code></p>
+<p>请问大神<code>&lt;frameset&gt;&lt;/frameset&gt;</code>是什么标签?</p>
+<h3 id="_17"><a name="user-content-_17" href="#_17" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>代码段</h3>
+<blockquote>
+<p>以下两种方案皆可<br />
+代码段与其他元素之间要有一个换行,前后都如此</p>
+</blockquote>
+<p>1). 使用4个空格来定义代码段,一个代码区块会一直持续到没有缩进的那一行或是文件结尾.</p>
+<pre><code>    //阶乘
+    function cheng($n){
+      if($n &gt; 0){
+        return $n * cheng($n-1);
+      }
+      if($n === 0){
+        return $n = 1;
+      }
+    }
+    cheng(5); // 120 
+</code></pre>
+
+<p>2). 使用 ```(三个以上反引号) 定义代码段开始 和 结束</p>
+<pre><code>$a = 3;
+$b = 3;
+if ($a = 5 || $b = 5) {
+  $a++;
+  $b++;
+}
+echo $a.'和'.$b;
+</code></pre>
+
+<pre><code class="javascript">var a = 11;
+alert(a);
+var p1 = document.getElementById('p1');
+</code></pre>
+
+<p>3). 在代码区块里面 &amp; &lt;  &gt;会自动转成 HTML 实体</p>
+<pre><code class="html">&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;h2&gt;我是HTML代码块&amp;nbsp;&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<hr />
+<h1 id="_18"><a name="user-content-_18" href="#_18" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>表格</h1>
+<pre><code>    |  表头1  |  表头2  |
+    |---------|---------|
+    | 1-1 con | 1-2 con |
+    | 2-1 con | 2-2 con |
+    | 3-1 con | 3-2 con |
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>sex</th>
+<th>age</th>
+<th>pro</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>seeker</td>
+<td>man</td>
+<td>18</td>
+<td>江苏</td>
+</tr>
+<tr>
+<td>1</td>
+<td>jack</td>
+<td>man</td>
+<td>40</td>
+<td>米国</td>
+</tr>
+<tr>
+<td>1</td>
+<td>dav</td>
+<td>man</td>
+<td>26</td>
+<td>英国</td>
+</tr>
+<tr>
+<td>1</td>
+<td>三胖</td>
+<td>man</td>
+<td>30</td>
+<td>北朝</td>
+</tr>
+<tr>
+<td>1</td>
+<td>obama</td>
+<td>man</td>
+<td>53</td>
+<td>米国</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="markdown_3"><a name="user-content-markdown_3" href="#markdown_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>列出markdown文档目录</h1>
+<p>只需在你想要放入目录结构的相应位置写入: <code>[TOC]</code>即可</p>
+<hr />
+<h1 id="_19"><a name="user-content-_19" href="#_19" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>自动转换</h1>
+<pre><code>使用markdown语法设置链接时,要特别注意特殊字符会自动转换: &lt; 和 &amp;
+&lt; 符号用于html的起始标签, &amp; 符号则用于标记 HTML 实体,
+如果你只是想要显示这些字符的原型,你必须要使用实体的形式: &amp;lt; 和 &amp;amp;
+</code></pre>
+
+<blockquote>
+<p>Markdown中的转义字符为(反斜线),转义的有:</p>
+</blockquote>
+<pre><code>    \\ 反斜杠
+    \` 反引号
+    \* 星号
+    \_ 下划线
+    \{\} 大括号
+    \[\] 中括号
+    \(\) 小括号
+    \# 井号
+    \+ 加号
+    \- 减号
+    \. 英文句号
+    \! 感叹号
+</code></pre>
+
+<h1 id="end"><a name="user-content-end" href="#end" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>END</h1>
+<p>至此,markdown的基本语法已介绍完了.<br />
+除了以上语法外,某些编辑器还做了语法扩展和补充,请自行了解学习</p>
+<blockquote>
+<p>Thanks Bye Bye</p>
+<blockquote>
+<p>XDL讲师.黄超</p>
+</blockquote>
+</blockquote></article></body></html>

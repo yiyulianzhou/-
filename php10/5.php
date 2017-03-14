@@ -1,41 +1,55 @@
 <?php 
-    header("content-type:text/html;charset=utf-8");
+	header("Content-type:text/html;charset=utf-8");
+	date_default_timezone_set('PRC');
+	require './filesize.php';
+	/*
+		遍历目录
+		opendir() 打开一个目录为资源
+		readdir() 读取打开的资源，并返回一个文件名(子串)
+		closedir() 关闭由opendir()打开的目录资源
+	*/
+	/**
+	 * [mydir 遍历目录]
+	 * @param string $dir [要遍历的目录]
+	 * @param 遍历结果
+	 */
+	function mydir($dir) {
+		//判断目录是否合法
+		if(!file_exists($dir)){
+			echo '目录或文件不合法！';
+			return false;
+		}
+		$num = 0 ;
+		//打开目录
+		$handle = opendir($dir);
 
-    //1.创建画布
-    $img = imagecreatetruecolor(500,500);
-    //参1,2 画布宽和高 
-    // var_dump($img);
-    //成功后返回图象资源,失败后返回 FALSE 
-    //2.准备颜色
-    //imagecolorallocate(image, red, green, blue)
-    //参1 资源
-    //参2,3,4  RGB   : 0-255   0x00~0xff
-    $white = imagecolorallocate($img, 255, 255, 255);
-    $black = imagecolorallocate($img, 0,0,0);
-    $red = imagecolorallocate($img, 255, 0,0);
-    $green = imagecolorallocate($img, 0, 255, 0);
-    $blue = imagecolorallocate($img, 0, 0,255);
-    $yellow = imagecolorallocate($img, 255,255,0);
+		//遍历目录
+		$str = '';
+		while(false !== ($filename=readdir($handle))) {
+			//拼接一个路径
+			$filepath = rtrim($dir,'/').'/'.$filename;
+			$color = $num++ % 2 ==0? 'abcdef':'#fff';
+			$str .='<tr bgcolor="'.$color.'">';
+			$str .='<td>'.$filename.'</td>';
+			$str .= '<td>'.getsize(filesize($filepath)).'</td>';
+			$str .='<td>'.(filetype($filepath)=='dir'?'目录':'文件').'</td>';
+			$str .='<td>'.date('Y-m-d H:i:s',filectime($filepath)).'</td>';
+			$str .='<td>'.(is_readable($filepath)==1?'YES':'NO').'</td>';
+			$str .='</tr>';
+		}
+		//关闭目录
+		closedir($handle);
+		return $str;
+	}
+	echo '<table border="1" align="center" cellspacing="0">';
+	echo '<tr>';
+	echo '<th>文件名</th>';
+	echo '<th>文件大小</th>';
+	echo '<th>目录/文件</th>';
+	echo '<th>创建时间</th>';
+	echo '<th>可读否</th>';
+	echo '</tr>';
 
-    //3.填充背景
-    // imagefill($img, x,y, $color)
-    imagefill($img, 0,0, $black);
-    //4.作画
-    //画多边形
-    // imagepolygon($img, array(), $num, $color)
-    // imagefilledpolygon($img, array(), $num, $color)
-    // 参1 资源
-    // 参2 为数组,里面包含了多边形各个顶点的坐标
-    // 参3 顶点的数量
-    // 参4 颜色
-    imagepolygon($img, array(250,100, 100,400, 400,400), 3, $green);
-    imagefilledpolygon($img, array(250,150, 150,350, 350,350), 3, $red);
-    
-    imagepolygon($img, array(250,50, 50,200, 100,450, 400,450, 450,200), 5, $yellow);
+	echo mydir('./apache/');
 
-    //5.保存,输出
-    header("content-type:image/jpeg");
-    imagejpeg($img);
-    //imagejpeg($img) imagegif($img)  imagepng($img)
-    //6.关闭资源/销毁(施放内存)
-    imagedestroy($img);
+	echo '</table>';

@@ -1,0 +1,54 @@
+作业
+mysql3.sql   X2
+将前三天的知识点整理出来  电子档
+铺6个页面   首页  二级页 详情页 购物车 订单页 个人中心  登录  注册
+
+
+
+前情提要
+
+建表语句
+    CREATE TABLE [IF NOT EXISTS] 表名(
+        字段1 数据类型 [字段属性],
+        字段2 数据类型 [字段属性],
+        ....
+        字段n 数据类型 [字段属性]
+    )[表引擎=引擎名][DEFAULT CHARSET=UTF8];
+
+字段数据类型
+
+整数:
+    TINYINT / SMALLINT / MEDIUMINT / INT / BIGINT
+浮点:
+    DECIMAL(M,D)
+    M 精度 是数据的总长度
+    D 标度 小数点后面的长度
+
+字符串
+    CHAR(M)    固定长度字符类型  长度为M
+    VARCHAR(M) 可变长度字符类型  长度为M+1
+TEXT类型
+    TEXT  0~65535
+
+ENUM类型     #百里挑一
+    ENUM('值1'，'值2'，...，'值n')
+SET类型      #百里挑n
+    SET('值1'，'值2'，...，'值n')
+
+时间和日期
+    一般我们存时间,都是存的UNIX时间戳
+    直接用varchar类型就搞定了,存时间戳,取出来转化一下.
+二进制类型
+    以二进制的方式存入数据 图片 音乐
+
+字段属性
+    UNSIGNED       无符号 (不能为负数) INT
+    AUTO_INCREMENT 自增  ++
+    ZEROFILL       零填充
+    DEFAULT        给字段默认值
+    NOT NULL       不能用null来作为值
+
+索引类型
+    PRIMARY KEY    主键
+    UNIQUE         唯一索引
+

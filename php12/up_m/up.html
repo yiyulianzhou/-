@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>文件上传</title>
+</head>
+<body>
+    <form action="./doup.php" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="MAX_FILE_SIZE" value="10485760">
+        文件上传: <br>
+        <input type="file" name="myfile1"><br>
+        <input type="file" name="myfile2"><br>
+        <input type="file" name="myfile3"><br>
+
+        <input type="submit" value="上传">
+    </form>
+</body>
+</html>

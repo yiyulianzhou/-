@@ -1,38 +1,42 @@
 <?php 
-    header("content-type:text/html;charset=utf-8");
+	header("Content-type:text/html;charset=utf-8");
+	date_default_timezone_set('PRC');
+	require './filesize.php';
 
-    //1.创建画布
-    $img = imagecreatetruecolor(500,500);
-    //参1,2 画布宽和高 
-    // var_dump($img);
-    //成功后返回图象资源,失败后返回 FALSE 
-    //2.准备颜色
-    //imagecolorallocate(image, red, green, blue)
-    //参1 资源
-    //参2,3,4  RGB   : 0-255   0x00~0xff
-    $white = imagecolorallocate($img, 255, 255, 255);
-    $black = imagecolorallocate($img, 0,0,0);
-    $red = imagecolorallocate($img, 255, 0,0);
-    $green = imagecolorallocate($img, 0, 255, 0);
-    $blue = imagecolorallocate($img, 0, 0,255);
-    $yellow = imagecolorallocate($img, 255,255,0);
+	/*
+		文件的属性
+		file_exists() 判断文件或目录是否存在
+		filesize() 获取文件的大小(字节)
+		is_readable() 是否可读
+		is_writeable() 是否可写
+		is_executable() 是否可执行
+		filectime() 创建时间 change
+		filemtime() 修改时间 modify
+		fileatime() 访问时间 access
+		stat() 获取大部分的文件属性
+	*/	
+		if(file_exists('./test')){
+			echo '存在';
+		}else{
+			echo '不存在';
+		}
+		echo '<hr />';
 
-    //3.填充背景
-    // imagefill($img, x,y, $color)
-    imagefill($img, 0,0, $black);
-    //4.作画
-    //画点
-    // imagesetpixel();
-    //参1 资源
-    //参2,3 为点的坐标
-    //参4 点的颜色
-    imagesetpixel($img, 250,250, $white);
-    for ($i=0; $i < 1000; $i++) { 
-        imagesetpixel($img, mt_rand(0,500),mt_rand(0,500), $white);
-    }
-    //5.保存,输出
-    header("content-type:image/jpeg");
-    imagejpeg($img);
-    //imagejpeg($img) imagegif($img)  imagepng($img)
-    //6.关闭资源/销毁(施放内存)
-    imagedestroy($img);
+		echo filesize('./imgs/');echo '<br />';
+		echo filesize('./test');echo '<br />';
+		echo getsize(1024000000);
+		echo getsize(filesize('./imgs/'));
+		echo '<hr />';
+		var_dump(is_readable('./filesize.php'));
+		var_dump(is_writable('./filesize.php'));
+		var_dump(is_executable('./filesize.php'));
+		var_dump(is_executable('./write.exe'));
+		echo '<hr />';
+		echo '1.php的创建时间：'.date('H:i:s',filectime('./1.php'));echo '<br />';
+		echo '1.php的修改时间：'.date('H:i:s',filemtime('./1.php'));echo '<br />';
+		echo '1.php的访问时间：'.date('H:i:s',fileatime('./1.php'));echo '<br />';
+
+		echo '<hr>';
+			echo '<pre>';
+				print_r(stat('./1.php'));
+			echo '<pre/>';

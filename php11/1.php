@@ -1,29 +1,27 @@
-<?php
-    header("content-type:text/html;charset=utf-8");
-    date_default_timezone_set('PRC');
+<?php 
+	header("content-type:text/html;charset=utf-8");
 
-    //直接跳转到文件,给你打开看
-    // for ($i=1; $i < 11; $i++) { 
-    //     echo '<a href="./imgs/'.$i.'.jpg">图片'.$i.'</a><br>';
-    // }
-    
-    // 使用GD库打开图片为背景
-    //   imagecreatefromjpeg()
-    //   imagecreatefrompng()
-    //   imagecreatefromgif()
-    $num = mt_rand(1,11);
-    $img = imagecreatefromjpeg('./imgs/'.$num.'.jpg');
+	/**
+	 * fgets() 读取一行 参2可指定读取本行的长度
+	 * fgetc() 读取一个字节
+	 * feof() 测试文件指针是否到了文件结束的位置
+	 * EOF 字符End Of File
+	 */
+	
+	$file = './test.txt';
 
-    imagettftext(
-        $img,60,mt_rand(-40,40),
-        mt_rand(100,1000),mt_rand(400,1000),
-        imagecolorallocate($img, 255, 0,0),
-        './font/5.ttf',
-        'I Want To Go There. ~ ~!'
-        );
+	$handle = fopen($file,'r');
 
-    // header("content-type:image/jpeg");
-    imagejpeg($img,'./'.$num.'.jpg');
-    imagedestroy($img);
+	echo fgets($handle);//每次只读取一行的内容，包括空行
+	echo fgetc($handle);//每次只读取一个字节
+	echo fgetc($handle);//每次只读取一个字节
+	echo fgetc($handle);//每次只读取一个字节
+	echo fgetc($handle);//每次只读取一个字节
 
-    echo '保存成功'.date('YmdHis');
+	while(!feof($handle)){
+		$str = fgets($handle);
+		echo nl2br($str);
+	}
+	fclose($handle);
+
+	echo nl2br($str);
